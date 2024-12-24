@@ -97,19 +97,14 @@ html {
   margin-bottom: 3px;
 }
 
-.search-form__label {
-  position: relative;
-}
-
 .search-form__pseudo-checkbox::after {
-  content: ''; /* Пустое содержимое для псевдоэлемента */
-  position: absolute;
+  content: ''; 
+  display: inline-block;
   background-color: #fff;
-  top: 4px;
-  left: 2px;
-  opacity: 0; /* Скрываем по умолчанию */
+  opacity: 0; 
   width: 15px;
   height: 15px;
+  margin-left: 2px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
