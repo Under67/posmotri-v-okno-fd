@@ -98,10 +98,10 @@ html {
 }
 
 .search-form__pseudo-checkbox::after {
-  content: ''; 
+  content: '';
   display: inline-block;
   background-color: #fff;
-  opacity: 0; 
+  opacity: 0;
   width: 15px;
   height: 15px;
   margin-left: 2px;
