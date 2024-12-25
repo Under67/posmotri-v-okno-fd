@@ -74,7 +74,7 @@ html {
   height: 27px;
   padding-left: 0;
   appearance: none;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .search-form__textfield:focus {
@@ -127,7 +127,6 @@ html {
 
 .content__details {
   grid-area: content__details;
-  height: 100%;
   width: 100%;
 }
 
@@ -222,7 +221,7 @@ html {
 .content__card-link {
   text-decoration: none;
   color: #fff;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .content__card-link:hover {
