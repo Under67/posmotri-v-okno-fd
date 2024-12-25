@@ -34,6 +34,7 @@ html {
 }
 
 .result__video-container {
+  position: relative;
   min-width: 711px;
   height: 386px;
   margin-bottom: 17px;
@@ -73,10 +74,15 @@ html {
   height: 27px;
   padding-left: 0;
   appearance: none;
+  cursor: pointer
 }
 
 .search-form__textfield:focus {
   outline: 0;
+}
+
+.search-form__label {
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -137,6 +143,7 @@ html {
   text-align: center;
   color: #fff;
   font-family: 'Fira Sans Condensed';
+  cursor: pointer;
 }
 
 .button:hover {
@@ -161,24 +168,22 @@ html {
   min-height: 34px;
 }
 
-.more-button {
-  width: 99%;
-  height: 34px;
-  margin-top: 30px;
-  margin-bottom: 3px;
-  margin-left: 1px;
-}
-
 .content__list-container {
+  position: relative;
   overflow: auto;
   max-height: 298px;
-  margin-top: 26px;
+  padding-top: 26px;
+}
+
+.content__list-item {
+  display: block;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 0 3px;
 }
 
 .content__video-card {
@@ -217,6 +222,24 @@ html {
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  cursor: pointer
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__list-item:focus {
+  outline: none;
+}
+
+.content__list-item:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link_current {
+  display: block;
+  background-color: #545050;
 }
 
 .content__video-card-title {
@@ -240,6 +263,14 @@ html {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.more-button {
+  width: 99%;
+  height: 34px;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  margin-left: 1px;
 }
 
 .visually-hidden {
