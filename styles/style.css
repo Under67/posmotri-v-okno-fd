@@ -14,15 +14,15 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  place-items: center center;
 }
 
 .content {
   display: grid;
   grid-template-areas: 'result content__details';
-  place-items: center end;
   grid-template-columns: 711px 399px;
   gap: 30px;
   margin: 133px 30px;
@@ -30,14 +30,14 @@ html {
 
 .result {
   grid-area: result;
-  padding-top: 76px;
+  padding-top: 80px;
 }
 
 .result__video-container {
   position: relative;
   min-width: 711px;
   height: 386px;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
 .result__video {
@@ -67,14 +67,15 @@ html {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  background-color: #1b1919;
+  background-color: inherit;
   font-size: 18px;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   width: 225px;
   height: 27px;
   padding-left: 0;
   appearance: none;
   cursor: pointer;
+  color: #fff;
 }
 
 .search-form__textfield:focus {
@@ -82,11 +83,19 @@ html {
 }
 
 .search-form__label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  gap: 5px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .search-form__checkbox-list {
@@ -98,9 +107,8 @@ html {
   width: 19px;
   display: inline-block;
   height: 19px;
-  outline: 1px solid #fff;
+  border: 1px solid #fff;
   vertical-align: middle;
-  margin-bottom: 3px;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -110,7 +118,8 @@ html {
   opacity: 0;
   width: 15px;
   height: 15px;
-  margin-left: 2px;
+  margin-bottom: 1px;
+  margin-left: 1px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -121,17 +130,9 @@ html {
   outline: none;
 }
 
-.search-form__checkbox:has(:focus-visible) {
-  outline: 1px solid #fff;
-}
-
 .content__details {
   grid-area: content__details;
   width: 100%;
-}
-
-.search-form__label-text:hover {
-  text-decoration: underline;
 }
 
 .button {
@@ -141,7 +142,7 @@ html {
   font-size: 18px;
   text-align: center;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   cursor: pointer;
 }
 
@@ -151,14 +152,11 @@ html {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .button:focus {
   outline: none;
-}
-
-.button:focus-visible {
-  outline: 1px solid #fff;
 }
 
 .search-form__submit-button {
@@ -167,10 +165,16 @@ html {
   min-height: 34px;
 }
 
+.search-form__submit-button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
 .content__list-container {
   position: relative;
   overflow: auto;
   max-height: 298px;
+  padding-top: 1px;
 }
 
 .content__list-item {
@@ -206,12 +210,13 @@ html {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
-  padding-bottom: 26px;
+  margin-top: 3px;
+  margin-bottom: 21px;
 }
 
 .content__accent {
@@ -219,20 +224,27 @@ html {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  margin-top: 1px;
 }
 
 .content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__list-item:focus {
+.content__card-link:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.content__card-link:focus {
   outline: none;
 }
 
-.content__list-item:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
@@ -242,7 +254,7 @@ html {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -257,7 +269,7 @@ html {
   font-size: 18px;
   line-height: 90%;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
